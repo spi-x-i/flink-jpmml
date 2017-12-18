@@ -109,7 +109,7 @@ package object scala {
       val abstractOperator = new EvaluationCoFunction[T, CTRL, R] {
 
         override def processElement1(event: T, ctx: CoProcessFunction[T, CTRL, R]#Context, out: Collector[R]): Unit = {
-          val model = servingModels.getOrElse(event.modelId.hashCode, fromMetadata(event.modelId))
+          val model = servingModels.getOrElse(event.modelId, fromMetadata(event.modelId))
           out.collect(f(event, model))
         }
 

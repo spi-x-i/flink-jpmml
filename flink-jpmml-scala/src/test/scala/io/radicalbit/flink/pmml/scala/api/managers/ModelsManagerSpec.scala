@@ -27,14 +27,14 @@ import io.radicalbit.flink.pmml.scala.utils.PmmlLoaderKit
 import org.scalatest.{Matchers, WordSpec}
 
 import scala.collection.{immutable, mutable}
-
+/*
 abstract class ModelsManagerSpec[M: ModelsManager] extends WordSpec with Matchers with PmmlLoaderKit {
 
   val modelName = "model"
   val modelVersion = 1
   val modelPath: String = getPMMLSource(Source.KmeansPmml)
 
-  val modelId: Int = ModelId(modelName, modelVersion).hashCode
+  val modelId: String = modelName + ModelId.separatorSymbol + modelVersion
 
   private val pmmlModel = PmmlModel.fromReader(ModelReader(getPMMLSource(Source.KmeansPmml42)))
   private val unknownIn = mutable.Map(scala.util.Random.nextInt() -> pmmlModel)
@@ -69,3 +69,4 @@ class ModelsManagerDelMessageSpec extends ModelsManagerSpec[DelMessage] {
     in.keySet.intersect(Set(controlMessage.modelId.hashCode)).toSet
 
 }
+ */

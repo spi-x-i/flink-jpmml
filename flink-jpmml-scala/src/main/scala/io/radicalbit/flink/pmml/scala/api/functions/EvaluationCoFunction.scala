@@ -63,8 +63,8 @@ private[scala] abstract class EvaluationCoFunction[EVENT, CTRL <: ServingMessage
   @transient
   final protected var servingMetadata: immutable.Map[ModelId, ModelInfo] = _
 
-  final protected lazy val servingModels: mutable.WeakHashMap[Int, PmmlModel] =
-    mutable.WeakHashMap.empty[Int, PmmlModel]
+  final protected lazy val servingModels: mutable.WeakHashMap[String, PmmlModel] =
+    mutable.WeakHashMap.empty[String, PmmlModel]
 
   override def processElement2(control: CTRL,
                                ctx: CoProcessFunction[EVENT, CTRL, OUT]#Context,
@@ -112,7 +112,7 @@ private[scala] abstract class EvaluationCoFunction[EVENT, CTRL <: ServingMessage
   final private def addAndRetrieveModel(modelId: String, currentModelId: ModelId): PmmlModel = {
     val currentModelPath = servingMetadata(currentModelId).path
     val loadedModel = loadModel(currentModelPath)
-    servingModels += (modelId.hashCode -> loadedModel)
+    servingModels += (modelId -> loadedModel)
     loadedModel
   }
 

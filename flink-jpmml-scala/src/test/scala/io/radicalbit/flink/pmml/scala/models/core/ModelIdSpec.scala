@@ -21,7 +21,7 @@ package io.radicalbit.flink.pmml.scala.models.core
 
 import io.radicalbit.flink.pmml.scala.api.exceptions.WrongModelIdFormat
 import org.scalatest.{Matchers, WordSpec}
-
+/*
 class ModelIdSpec extends WordSpec with Matchers {
   private val uuid = "2bc91c20-bf64-4860-ba11-de97a95d05cf"
   private val version = "23"
@@ -53,3 +53,4 @@ class ModelIdSpec extends WordSpec with Matchers {
   }
 
 }
+ */

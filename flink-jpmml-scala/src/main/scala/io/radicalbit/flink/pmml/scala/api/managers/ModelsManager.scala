@@ -32,13 +32,13 @@ import scala.collection.{immutable, mutable}
   */
 sealed trait ModelsManager[T] {
 
-  def manageModels(command: T, models: mutable.Map[Int, PmmlModel]): immutable.Set[Int]
+  def manageModels(command: T, models: mutable.Map[String, PmmlModel]): immutable.Set[String]
 
 }
 
 object ModelsManager extends LazyLogging {
 
-  def apply[T: ModelsManager](command: T, models: mutable.Map[Int, PmmlModel]): Set[Int] =
+  def apply[T: ModelsManager](command: T, models: mutable.Map[String, PmmlModel]): Set[String] =
     implicitly[ModelsManager[T]].manageModels(command, models)
 
   /**
@@ -50,8 +50,8 @@ object ModelsManager extends LazyLogging {
     */
   implicit val deleteModelsServing = new ModelsManager[DelMessage] {
 
-    def manageModels(delMessage: DelMessage, models: mutable.Map[Int, PmmlModel]): immutable.Set[Int] = {
-      models.keySet.intersect(Set(delMessage.modelId.hashCode)).toSet
+    def manageModels(delMessage: DelMessage, models: mutable.Map[String, PmmlModel]): immutable.Set[String] = {
+      models.keySet.intersect(Set(delMessage.modelId.toString)).toSet
     }
 
   }

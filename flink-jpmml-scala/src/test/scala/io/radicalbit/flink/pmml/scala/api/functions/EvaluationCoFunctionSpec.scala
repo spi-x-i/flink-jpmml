@@ -47,7 +47,7 @@ object EvaluationCoFunctionSpec extends FlinkTestKitCompanion[Prediction] {
       override def processElement1(event: DynamicInput,
                                    ctx: CoProcessFunction[DynamicInput, ServingMessage, Prediction]#Context,
                                    out: Collector[Prediction]): Unit =
-        out.collect(f(event, servingModels.getOrElse(event.modelId.hashCode, fromMetadata(event.modelId))))
+        out.collect(f(event, servingModels.getOrElse(event.modelId, fromMetadata(event.modelId))))
     }
 
   private val defaultPrediction = Prediction(Score(1.0))

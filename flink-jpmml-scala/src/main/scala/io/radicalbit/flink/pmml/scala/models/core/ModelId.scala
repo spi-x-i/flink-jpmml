@@ -61,4 +61,6 @@ final case class ModelId(name: String, version: Long) {
 
   override def hashCode: Int = (name + ModelId.separatorSymbol + version).hashCode
 
+  override def toString: String = name + ModelId.separatorSymbol + version
+
 }
