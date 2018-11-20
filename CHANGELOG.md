@@ -1,15 +1,29 @@
 # Change Log
 
-## [Unreleased](https://github.com/FlinkML/flink-jpmml/tree/HEAD)
+## [v0.6.2](https://github.com/FlinkML/flink-jpmml/tree/v0.6.2) (2018-11-19)
+[Full Changelog](https://github.com/FlinkML/flink-jpmml/compare/v0.6.1...v0.6.2)
 
-[Full Changelog](https://github.com/FlinkML/flink-jpmml/compare/v0.6.1...HEAD)
+**Fixed bugs:**
+
+- Quick evaluate method should have a different name in respect of the traditional one [\#53](https://github.com/FlinkML/flink-jpmml/issues/53)
+
+**Closed issues:**
+
+- Update flink 1.3 to latest minor version [\#57](https://github.com/FlinkML/flink-jpmml/issues/57)
+
+**Merged pull requests:**
+
+- Updating flink to latest 1.3 minor version \#57 [\#58](https://github.com/FlinkML/flink-jpmml/pull/58) ([spi-x-i](https://github.com/spi-x-i))
+- \[BUGFIX\] Quick evaluate method should have a different name [\#56](https://github.com/FlinkML/flink-jpmml/pull/56) ([francescofrontera](https://github.com/francescofrontera))
+- Added license and codecov badges [\#50](https://github.com/FlinkML/flink-jpmml/pull/50) ([maocorte](https://github.com/maocorte))
+
+## [v0.6.1](https://github.com/FlinkML/flink-jpmml/tree/v0.6.1) (2017-09-27)
+[Full Changelog](https://github.com/FlinkML/flink-jpmml/compare/v0.6.0...v0.6.1)
 
 **Implemented enhancements:**
 
+- Add maven libraries version badges [\#48](https://github.com/FlinkML/flink-jpmml/issues/48)
 - Publish the 0.6.1 version on a public repo [\#3](https://github.com/FlinkML/flink-jpmml/issues/3)
-
-## [v0.6.1](https://github.com/FlinkML/flink-jpmml/tree/v0.6.1) (2017-09-22)
-[Full Changelog](https://github.com/FlinkML/flink-jpmml/compare/v0.6.0...v0.6.1)
 
 **Closed issues:**
 
@@ -18,6 +32,9 @@
 
 **Merged pull requests:**
 
+- \[\#48\] Added published version badges [\#49](https://github.com/FlinkML/flink-jpmml/pull/49) ([maocorte](https://github.com/maocorte))
+- \[\#37\] Added flink-streaming-spec library [\#47](https://github.com/FlinkML/flink-jpmml/pull/47) ([maocorte](https://github.com/maocorte))
+- Releasing Flink-JPMML 0.6.1 [\#45](https://github.com/FlinkML/flink-jpmml/pull/45) ([spi-x-i](https://github.com/spi-x-i))
 - Update publish setting for sonatype [\#44](https://github.com/FlinkML/flink-jpmml/pull/44) ([francescofrontera](https://github.com/francescofrontera))
 - Adding Changelog file [\#43](https://github.com/FlinkML/flink-jpmml/pull/43) ([spi-x-i](https://github.com/spi-x-i))
 
